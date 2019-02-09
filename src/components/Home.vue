@@ -1,5 +1,5 @@
 <template>
   <div>
-    <div class="inneritem">Hello, world</div>
+    <inner-item>Hello, world</inner-item>
   </div>
 </template>
