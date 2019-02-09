@@ -6,6 +6,12 @@
 </template>
 
 <script>
+const DEFAULT_OPTIONS = {
+  color: 'ff0000',
+  auto_play: false,
+  show_artwork: false,
+};
+
 export default {
   props: {
     trackId: {
@@ -24,6 +30,10 @@ export default {
       required: false,
       default: '166',
     },
+    options: {
+      type: Object,
+      required: false,
+    },
   },
   computed: {
     queryUrl() {
@@ -32,10 +42,15 @@ export default {
         : `https://api.soundcloud.com/tracks/${this.trackId}`;
     },
     iframeBindings() {
+      const qs = new URLSearchParams(Object.assign(
+        { url: this.queryUrl },
+        DEFAULT_OPTIONS,
+        this.options
+      ));
       return {
         width: this.width,
         height: this.height,
-        src: `https://w.soundcloud.com/player/?url=${encodeURI(this.queryUrl)}&color=ff0000&auto_play=false&show_artwork=false`,
+        src: `https://w.soundcloud.com/player/?${qs.toString()}`,
       };
     },
   },

@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import Home from '@/components/Home';
 import Audio from '@/components/Audio';
 import Video from '@/components/Video';
+import PianoSamples from '@/components/PianoSamples';
 
 Vue.use(Router);
 
@@ -26,7 +27,7 @@ export default new Router({
     {
       path: '/piano-samples',
       name: 'PianoSamples',
-      component: Home,
+      component: PianoSamples,
     },
     {
       path: '/contact',
