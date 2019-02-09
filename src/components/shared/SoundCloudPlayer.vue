@@ -10,7 +10,9 @@ export default {
   props: {
     trackId: {
       type: String,
-      required: true,
+    },
+    playlistId: {
+      type: String,
     },
     width: {
       type: String,
@@ -24,12 +26,17 @@ export default {
     },
   },
   computed: {
+    queryUrl() {
+      return this.playlistId
+        ? `https://api.soundcloud.com/playlists/${this.playlistId}`
+        : `https://api.soundcloud.com/tracks/${this.trackId}`;
+    },
     iframeBindings() {
       return {
         width: this.width,
         height: this.height,
-        src: `https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F${this.trackId}&color=ff0000&auto_play=false&show_artwork=false`,
-      }
+        src: `https://w.soundcloud.com/player/?url=${encodeURI(this.queryUrl)}&color=ff0000&auto_play=false&show_artwork=false`,
+      };
     },
   },
 };
