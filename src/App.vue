@@ -11,6 +11,14 @@
 <style>
 @import url(https://fonts.googleapis.com/css?family=Muli);
 
+body {
+  color: #666;
+  background-color: #fff;
+  background-image: url(./assets/piano-background.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
 #app {
   height: 100%;
   width: 100%;
@@ -18,11 +26,6 @@
   padding: 0;
   text-align: center;
   font: 12pt/16pt Muli, verdana, sans-serif;
-  color: #666;
-  background-color: #fff;
-  background-image: url(./assets/piano-background.jpg);
-  background-attachment: fixed;
-  background-repeat: no-repeat;
 }
 
 .page {
