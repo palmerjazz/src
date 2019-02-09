@@ -11,5 +11,25 @@ export default new Router({
       name: 'Home',
       component: Home,
     },
+    {
+      path: '/audio',
+      name: 'Audio',
+      component: Home,
+    },
+    {
+      path: '/video',
+      name: 'Video',
+      component: Home,
+    },
+    {
+      path: '/piano-samples',
+      name: 'PianoSamples',
+      component: Home,
+    },
+    {
+      path: '/contact',
+      name: 'Contact',
+      component: Home,
+    },
   ],
 });

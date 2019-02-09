@@ -1,13 +1,5 @@
 <template>
   <div>
-    Hello
+    <div class="inneritem">Hello, world</div>
   </div>
 </template>
-
-<script>
-export default {
-};
-</script>
-
-<style scoped>
-</style>
