@@ -4,6 +4,7 @@ import Home from '@/components/Home';
 import Audio from '@/components/Audio';
 import Video from '@/components/Video';
 import PianoSamples from '@/components/PianoSamples';
+import Contact from '@/components/Contact';
 
 Vue.use(Router);
 
@@ -32,7 +33,7 @@ export default new Router({
     {
       path: '/contact',
       name: 'Contact',
-      component: Home,
+      component: Contact,
     },
   ],
 });
