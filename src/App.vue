@@ -1,12 +1,23 @@
 <template>
   <div id="app">
     <div class="page">
-      <page-header class="page-section"/>
+      <PageHeader class="page-section"/>
       <router-view class="main-items"/>
-      <page-footer class="page-section"/>
+      <PageFooter class="page-section"/>
     </div>
   </div>
 </template>
+
+<script>
+import { PageHeader, PageFooter } from '@/components/page';
+
+export default {
+  components: {
+    PageHeader,
+    PageFooter,
+  },
+};
+</script>
 
 <style>
 @import url(https://fonts.googleapis.com/css?family=Muli);
