@@ -1,13 +1,18 @@
 <template>
   <div>
-    <inner-item v-for="{ routeName, linkText } in siteSections" :key="routeName">
+    <InnerItem v-for="{ routeName, linkText } in siteSections" :key="routeName">
       <div><router-link :to="{ name: routeName }">{{ linkText }}</router-link></div>
-    </inner-item>
+    </InnerItem>
   </div>
 </template>
 
 <script>
+import InnerItem from '@/components/common/InnerItem';
+
 export default {
+  components: {
+    InnerItem,
+  },
   data() {
     return {
       siteSections: [

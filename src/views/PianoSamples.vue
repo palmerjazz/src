@@ -1,6 +1,6 @@
 <template>
   <div>
-    <inner-item title="Piano Samples">
+    <InnerItem title="Piano Samples">
       <SoundCloudPlayer width="100%" height="450" playlist-id="73340841" :options="{
         auto_play: false,
         hide_related: true,
@@ -10,19 +10,21 @@
         visual: false,
         show_artwork: true
       }"/>
-    </inner-item>
-    <inner-item>
+    </InnerItem>
+    <InnerItem>
       <div>SoundCloud profile:</div>
       <div><a href="https://soundcloud.com/palmerjazz">Jazz Piano by Andrew Palmer</a></div>
-    </inner-item>
+    </InnerItem>
   </div>
 </template>
 
 <script>
+import InnerItem from '@/components/common/InnerItem';
 import SoundCloudPlayer from '@/components/media/SoundCloudPlayer';
 
 export default {
   components: {
+    InnerItem,
     SoundCloudPlayer,
   },
 };

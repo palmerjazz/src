@@ -1,20 +1,22 @@
 <template>
   <div>
-    <inner-item title="YouTube">
+    <InnerItem title="YouTube">
       <p><i>For my <a :href="videoPortfolioLink">video portfolio</a>, visit my YouTube page!</i></p>
-    </inner-item>
+    </InnerItem>
 
-    <inner-item title="Videos">
+    <InnerItem title="Videos">
       <YouTubeVideo v-for="video in youtubeVideos" :key="video.videoId" v-bind="video" width="420" height="315"/>
-    </inner-item>
+    </InnerItem>
   </div>
 </template>
 
 <script>
+import InnerItem from '@/components/common/InnerItem';
 import YouTubeVideo from '@/components/media/YouTubeVideo';
 
 export default {
   components: {
+    InnerItem,
     YouTubeVideo,
   },
   data() {

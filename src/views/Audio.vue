@@ -1,16 +1,18 @@
 <template>
   <div>
-    <inner-item title="Jazz Big Band Audio">
+    <InnerItem title="Jazz Big Band Audio">
       <SoundCloudPlayer v-for="track in tracks" :key="track.trackId" v-bind="track"/>
-    </inner-item>
+    </InnerItem>
   </div>
 </template>
 
 <script>
+import InnerItem from '@/components/common/InnerItem';
 import SoundCloudPlayer from '@/components/media/SoundCloudPlayer';
 
 export default {
   components: {
+    InnerItem,
     SoundCloudPlayer,
   },
   data() {
