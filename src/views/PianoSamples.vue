@@ -1,7 +1,7 @@
 <template>
   <div>
     <inner-item title="Piano Samples">
-      <sound-cloud-player width="100%" height="450" playlist-id="73340841" :options="{
+      <SoundCloudPlayer width="100%" height="450" playlist-id="73340841" :options="{
         auto_play: false,
         hide_related: true,
         show_comments: false,
@@ -17,3 +17,13 @@
     </inner-item>
   </div>
 </template>
+
+<script>
+import SoundCloudPlayer from '@/components/media/SoundCloudPlayer';
+
+export default {
+  components: {
+    SoundCloudPlayer,
+  },
+};
+</script>

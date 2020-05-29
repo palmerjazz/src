@@ -1,13 +1,18 @@
 <template>
   <div>
     <inner-item title="Jazz Big Band Audio">
-      <sound-cloud-player v-for="track in tracks" :key="track.trackId" v-bind="track"/>
+      <SoundCloudPlayer v-for="track in tracks" :key="track.trackId" v-bind="track"/>
     </inner-item>
   </div>
 </template>
 
 <script>
+import SoundCloudPlayer from '@/components/media/SoundCloudPlayer';
+
 export default {
+  components: {
+    SoundCloudPlayer,
+  },
   data() {
     return {
       tracks: [

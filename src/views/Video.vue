@@ -5,13 +5,18 @@
     </inner-item>
 
     <inner-item title="Videos">
-      <youtube-video v-for="video in youtubeVideos" :key="video.videoId" v-bind="video" width="420" height="315"/>
+      <YouTubeVideo v-for="video in youtubeVideos" :key="video.videoId" v-bind="video" width="420" height="315"/>
     </inner-item>
   </div>
 </template>
 
 <script>
+import YouTubeVideo from '@/components/media/YouTubeVideo';
+
 export default {
+  components: {
+    YouTubeVideo,
+  },
   data() {
     return {
       videoPortfolioLink: 'https://www.youtube.com/user/AndrewPalmerJazz',
