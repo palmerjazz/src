@@ -1,10 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from '@/components/Home';
-import Audio from '@/components/Audio';
-import Video from '@/components/Video';
-import PianoSamples from '@/components/PianoSamples';
-import Contact from '@/components/Contact';
+import Home from '../views/Home';
 
 Vue.use(Router);
 
@@ -18,22 +14,22 @@ export default new Router({
     {
       path: '/audio',
       name: 'Audio',
-      component: Audio,
+      component: () => import('../views/Audio'),
     },
     {
       path: '/video',
       name: 'Video',
-      component: Video,
+      component: () => import('../views/Video'),
     },
     {
       path: '/piano-samples',
       name: 'PianoSamples',
-      component: PianoSamples,
+      component: () => import('../views/PianoSamples'),
     },
     {
       path: '/contact',
       name: 'Contact',
-      component: Contact,
+      component: () => import('../views/Contact'),
     },
   ],
 });
