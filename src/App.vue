@@ -47,7 +47,7 @@ body {
 }
 
 .page {
-  width: 900px;
+  max-width: 900px;
   margin: auto;
 }
 
