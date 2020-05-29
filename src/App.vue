@@ -11,6 +11,13 @@
 <style>
 @import url(https://fonts.googleapis.com/css?family=Muli);
 
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   color: #666;
   background-color: #fff;
