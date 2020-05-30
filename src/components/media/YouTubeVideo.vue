@@ -28,6 +28,9 @@ export default {
   computed: {
     iframeBindings() {
       return {
+        style: {
+          maxWidth: '100%',
+        },
         width: this.width,
         height: this.height,
         allowfullscreen: true,
